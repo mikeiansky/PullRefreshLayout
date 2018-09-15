@@ -8,6 +8,9 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.GridView;
 
+/**
+ * <a href="https://github.com/WinsonZhou/PullRefreshLayout">the url of this project on the github</a>
+ */
 public class PullRefreshGridView extends GridView implements PullRefreshContentWatcher {
 
     public static final String TAG = PullRefreshGridView.class.getSimpleName();

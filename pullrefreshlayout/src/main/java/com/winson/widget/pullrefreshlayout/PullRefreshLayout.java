@@ -13,6 +13,9 @@ import android.view.ViewConfiguration;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.FrameLayout;
 
+/**
+ * <a href="https://github.com/WinsonZhou/PullRefreshLayout">the url of this project on the github</a>
+ */
 public class PullRefreshLayout extends FrameLayout {
 
     public static final String TAG = PullRefreshLayout.class.getSimpleName();

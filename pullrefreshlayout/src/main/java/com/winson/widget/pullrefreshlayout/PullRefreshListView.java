@@ -9,6 +9,9 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ListView;
 
+/**
+ * <a href="https://github.com/WinsonZhou/PullRefreshLayout">the url of this project on the github</a>
+ */
 public class PullRefreshListView extends ListView implements PullRefreshContentWatcher {
 
     public static final String TAG = PullRefreshListView.class.getSimpleName();

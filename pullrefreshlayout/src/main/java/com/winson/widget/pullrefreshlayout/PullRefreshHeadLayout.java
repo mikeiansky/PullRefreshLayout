@@ -12,6 +12,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+/**
+ * <a href="https://github.com/WinsonZhou/PullRefreshLayout">the url of this project on the github</a>
+ */
 public class PullRefreshHeadLayout extends LinearLayout implements PullRefreshHeadWatcher {
 
     public static final String TAG = PullRefreshHeadWatcher.class.getSimpleName();

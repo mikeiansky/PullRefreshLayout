@@ -9,6 +9,9 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ScrollView;
 
+/**
+ * <a href="https://github.com/WinsonZhou/PullRefreshLayout">the url of this project on the github</a>
+ */
 public class PullRefreshScrollView extends ScrollView implements PullRefreshContentWatcher {
 
     public static final String TAG = PullRefreshScrollView.class.getSimpleName();

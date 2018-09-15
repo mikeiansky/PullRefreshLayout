@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
@@ -159,6 +160,24 @@ public class PullRefreshLayout extends FrameLayout {
 
     public void setOnRefreshListener(OnRefreshListener refreshListener) {
         this.onRefreshListener = refreshListener;
+    }
+
+    public void setHeadWatcher(int layoutId){
+        View headView = LayoutInflater.from(getContext()).inflate(layoutId, this, false);
+        if (headView instanceof PullRefreshHeadWatcher) {
+            addHeadWatcher((PullRefreshHeadWatcher) headView);
+        } else {
+            addHeadView(headView);
+        }
+    }
+
+    public void setContentWatcher(int layoutId) {
+        View contentView = LayoutInflater.from(getContext()).inflate(layoutId, this, false);
+        if (contentView instanceof PullRefreshContentWatcher) {
+            addContentWatcher((PullRefreshContentWatcher) contentView);
+        } else {
+            addContentView(contentView);
+        }
     }
 
     public void addHeadWatcher(PullRefreshHeadWatcher headWatcher) {

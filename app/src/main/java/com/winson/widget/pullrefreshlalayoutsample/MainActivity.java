@@ -44,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
         apiItem = new ApiItem("Recycler View Demo", RecyclerViewDemo.class);
         demos.add(apiItem);
 
+        apiItem = new ApiItem("Id Demo", IdDemo.class);
+        demos.add(apiItem);
+
         listView.setAdapter(new CommonAdapter<ApiItem>(this, R.layout.list_item, demos) {
             @Override
             public void convert(ViewHolder viewHolder, ApiItem obj, int position) {

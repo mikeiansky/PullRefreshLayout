@@ -23,6 +23,7 @@
         <activity android:name=".GridViewDemo" />
         <activity android:name=".RecyclerViewDemo" />
         <activity android:name=".NormalDemo" />
+        <activity android:name=".IdDemo" />
     </application>
 
 </manifest>

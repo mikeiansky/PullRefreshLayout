@@ -20,6 +20,7 @@
         </activity>
         <activity android:name=".ListViewDemo" />
         <activity android:name=".ScrollViewDemo" />
+        <activity android:name=".GridViewDemo" />
     </application>
 
 </manifest>

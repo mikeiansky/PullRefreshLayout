@@ -20,7 +20,7 @@ public class ListViewDemo extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.list_view_demo);
+        setContentView(R.layout.pull_refresh_sample);
 
         pullRefreshLayout = findViewById(R.id.pull_refresh_layout);
         PullRefreshHeadLayout headView2 = (PullRefreshHeadLayout) LayoutInflater.from(this).inflate(R.layout.pull_refresh_head_view, pullRefreshLayout, false);

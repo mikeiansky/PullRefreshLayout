@@ -31,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
         ApiItem apiItem = new ApiItem("List View Demo", ListViewDemo.class);
         demos.add(apiItem);
 
+        apiItem = new ApiItem("Scroll View Demo", ScrollViewDemo.class);
+        demos.add(apiItem);
+
         listView.setAdapter(new CommonAdapter<ApiItem>(this, R.layout.list_item, demos) {
             @Override
             public void convert(ViewHolder viewHolder, ApiItem obj, int position) {

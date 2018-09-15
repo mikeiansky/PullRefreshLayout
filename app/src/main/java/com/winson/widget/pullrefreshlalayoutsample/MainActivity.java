@@ -29,7 +29,10 @@ public class MainActivity extends AppCompatActivity {
         listView = findViewById(R.id.list_view);
 
         final List<ApiItem> demos = new ArrayList<>();
-        ApiItem apiItem = new ApiItem("List View Demo", ListViewDemo.class);
+        ApiItem apiItem = new ApiItem("Normal View Demo", NormalDemo.class);
+        demos.add(apiItem);
+
+        apiItem = new ApiItem("List View Demo", ListViewDemo.class);
         demos.add(apiItem);
 
         apiItem = new ApiItem("Scroll View Demo", ScrollViewDemo.class);

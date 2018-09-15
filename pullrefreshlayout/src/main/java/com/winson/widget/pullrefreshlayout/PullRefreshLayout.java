@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
+import android.view.ViewGroup;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.FrameLayout;
 
@@ -162,7 +163,7 @@ public class PullRefreshLayout extends FrameLayout {
         this.onRefreshListener = refreshListener;
     }
 
-    public void setHeadWatcher(int layoutId){
+    public void setHeadWatcher(int layoutId) {
         View headView = LayoutInflater.from(getContext()).inflate(layoutId, this, false);
         if (headView instanceof PullRefreshHeadWatcher) {
             addHeadWatcher((PullRefreshHeadWatcher) headView);
@@ -199,6 +200,27 @@ public class PullRefreshLayout extends FrameLayout {
         this.contentWatcher = contentView;
         addView(contentView.getStick());
     }
+
+    @Override
+    public void addView(View child, int index, ViewGroup.LayoutParams params) {
+        super.addView(child, index, params);
+        int id = child.getId();
+        if (child instanceof PullRefreshHeadWatcher) {
+            headWatcher = (PullRefreshHeadWatcher) child;
+        }
+        if (child instanceof PullRefreshContentWatcher) {
+            contentWatcher = (PullRefreshContentWatcher) child;
+        }
+        if (id == R.id.pull_refresh_head
+                && !(child instanceof PullRefreshHeadWatcher)) {
+            headWatcher = new HeadWatcherWrapper(child);
+        }
+        if (id == R.id.pull_refresh_content
+                && !(child instanceof PullRefreshContentWatcher)) {
+            contentWatcher = new ContentWatcherWrapper(child);
+        }
+    }
+
 
     public void addContentView(View contentView) {
         addContentWatcher(new ContentWatcherWrapper(contentView));

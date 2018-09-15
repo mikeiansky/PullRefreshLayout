@@ -1,0 +1,6 @@
+<resources>
+
+    <item name="pull_refresh_head" type="id"/>
+    <item name="pull_refresh_content" type="id"/>
+
+</resources>

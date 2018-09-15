@@ -24,6 +24,7 @@
         <activity android:name=".RecyclerViewDemo" />
         <activity android:name=".NormalDemo" />
         <activity android:name=".IdDemo" />
+        <activity android:name=".LayoutDemo" />
     </application>
 
 </manifest>

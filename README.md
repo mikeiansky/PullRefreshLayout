@@ -1,7 +1,7 @@
 # PullRefreshLayout
-=======
-A powerful pull refresh layout library for Android
-![image](https://github.com/WinsonZhou/PullRefreshLayout/blob/master/screenshots/pullrefreshlayout.gif)
+======= 
+A powerful pull refresh layout library for Android 
+![image](https://github.com/WinsonZhou/PullRefreshLayout/blob/master/screenshots/pullrefreshlayout.gif) 
 
 Download
 --------

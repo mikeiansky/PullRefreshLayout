@@ -26,8 +26,8 @@ or Maven:
 UserGuide
 --------
 you can only use like this
-<pre><code>
-<com.winson.widget.pullrefreshlayout.PullRefreshLayout
+
+    <com.winson.widget.pullrefreshlayout.PullRefreshLayout
         android:id="@+id/pull_refresh_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -47,7 +47,5 @@ you can only use like this
             
     </com.winson.widget.pullrefreshlayout.PullRefreshLayout>
     
-    
-</code></pre>
 
 [1]: https://blog.csdn.net/wenxiang423/article/details/82746029

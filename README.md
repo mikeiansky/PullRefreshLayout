@@ -12,14 +12,15 @@ Download
 
 Download the latest AAR from [Maven Central][2] or grab via Gradle:
 ```groovy
-implementation 'com.squareup.picasso:picasso:2.71828'
+implementation 'com.github.winsonzhou:pullrefreshlayout:1.0.1'
 ```
 or Maven:
 ```xml
 <dependency>
-  <groupId>com.squareup.picasso</groupId>
-  <artifactId>picasso</artifactId>
-  <version>2.71828</version>
+  <groupId>com.github.winsonzhou</groupId>
+  <artifactId>pullrefreshlayout</artifactId>
+  <version>1.0.1</version>
+  <type>pom</type>
 </dependency>
 ```
 

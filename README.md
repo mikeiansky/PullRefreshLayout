@@ -3,7 +3,9 @@ PullRefreshLayout
 
 A powerful pull refresh layout library for Android  
 
-![image](https://github.com/WinsonZhou/PullRefreshLayout/blob/master/screenshots/pullrefreshlayout.gif)   
+![image](https://github.com/WinsonZhou/PullRefreshLayout/blob/master/screenshots/pullrefreshlayout.gif)  
+
+for more information please see [the website][1]
 
 
 Download
@@ -21,3 +23,5 @@ or Maven:
   <version>2.71828</version>
 </dependency>
 ```
+
+[1]: https://blog.csdn.net/wenxiang423/article/details/82746029

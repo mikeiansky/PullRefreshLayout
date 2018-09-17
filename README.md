@@ -25,25 +25,29 @@ or Maven:
 ```
 UserGuide
 --------
-
+you can only use like this
+<pre><code>
 <com.winson.widget.pullrefreshlayout.PullRefreshLayout
         android:id="@+id/pull_refresh_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
+        
         <com.winson.widget.pullrefreshlayout.PullRefreshHeadLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:background="@color/colorAccent"
             android:orientation="vertical">
-
+            
         </com.winson.widget.pullrefreshlayout.PullRefreshHeadLayout>
-
+        
         <com.winson.widget.pullrefreshlayout.PullRefreshListView
             android:id="@+id/list_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
-
+            
     </com.winson.widget.pullrefreshlayout.PullRefreshLayout>
+    
+    
+</code></pre>
 
 [1]: https://blog.csdn.net/wenxiang423/article/details/82746029

@@ -273,7 +273,6 @@ public class PullRefreshLayout extends FrameLayout {
 
     public void refreshComplete() {
         onRefresh = false;
-        headWatcher.onRefreshComplete();
         if (!onTouch) {
             release();
         }
@@ -281,7 +280,6 @@ public class PullRefreshLayout extends FrameLayout {
 
     public void refreshComplete(int delay) {
         onRefresh = false;
-        headWatcher.onRefreshComplete();
         if (!onTouch) {
             postDelayed(releaseRun, delay);
         }
@@ -408,6 +406,7 @@ public class PullRefreshLayout extends FrameLayout {
             }
             lastReleaseY = totalOffset;
             releaseAnimator = ValueAnimator.ofInt(totalOffset, maxOffset);
+            headWatcher.onRefreshComplete();
         } else {
             if (totalOffset == 0) {
                 return;

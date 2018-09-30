@@ -397,6 +397,7 @@ public class PullRefreshLayout extends FrameLayout {
     }
 
     private void release() {
+        headWatcher.onRefreshComplete();
         if (refreshAnimator != null) {
             refreshAnimator.cancel();
         }
@@ -406,7 +407,6 @@ public class PullRefreshLayout extends FrameLayout {
             }
             lastReleaseY = totalOffset;
             releaseAnimator = ValueAnimator.ofInt(totalOffset, maxOffset);
-            headWatcher.onRefreshComplete();
         } else {
             if (totalOffset == 0) {
                 return;

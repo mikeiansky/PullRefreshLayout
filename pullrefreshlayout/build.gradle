@@ -10,8 +10,8 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 28
-        versionCode 3
-        versionName "1.1.2"
+        versionCode 4
+        versionName "1.2.2"
 
     }
 
@@ -34,7 +34,7 @@ dependencies {
 def siteUrl = 'https://github.com/WinsonZhou/PullRefreshLayout' // 项目主页。
 def gitUrl = 'https://github.com/WinsonZhou/PullRefreshLayout.git' // Git仓库的url
 group = "com.github.winsonzhou"
-version = '1.1.2'
+version = '1.2.2'
 
 install {
     repositories.mavenInstaller {

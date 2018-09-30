@@ -36,6 +36,7 @@
         <activity android:name=".NormalDemo" />
         <activity android:name=".IdDemo" />
         <activity android:name=".LayoutDemo" />
+        <activity android:name=".JDRefreshActivity"/>
     </application>
 
 </manifest>

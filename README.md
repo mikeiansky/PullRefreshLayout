@@ -12,14 +12,14 @@ Download
 
 Download the latest AAR from [Maven Central][2] or grab via Gradle:
 ```groovy
-implementation 'com.github.winsonzhou:pullrefreshlayout:1.0.1'
+implementation 'com.github.winsonzhou:pullrefreshlayout:1.2.2'
 ```
 or Maven:
 ```xml
 <dependency>
   <groupId>com.github.winsonzhou</groupId>
   <artifactId>pullrefreshlayout</artifactId>
-  <version>1.0.1</version>
+  <version>1.2.2</version>
   <type>pom</type>
 </dependency>
 ```

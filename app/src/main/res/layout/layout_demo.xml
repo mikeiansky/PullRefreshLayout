@@ -8,13 +8,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.winson.widget.pullrefreshlayout.PullRefreshHeadLayout
+        <com.winson.widget.pullrefreshlalayoutsample.PullRefreshHeadLayoutTest
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:background="@color/colorAccent"
             android:orientation="vertical">
 
-        </com.winson.widget.pullrefreshlayout.PullRefreshHeadLayout>
+        </com.winson.widget.pullrefreshlalayoutsample.PullRefreshHeadLayoutTest>
 
         <com.winson.widget.pullrefreshlayout.PullRefreshListView
             android:id="@+id/list_view"

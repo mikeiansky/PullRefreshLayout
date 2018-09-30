@@ -10,9 +10,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.winson.widget.pullrefreshlayout.PullRefreshHeadLayout;
 import com.winson.widget.pullrefreshlayout.PullRefreshLayout;
-import com.winson.widget.pullrefreshlayout.PullRefreshScrollView;
 
 public class NormalDemo extends AppCompatActivity {
 
@@ -22,7 +20,7 @@ public class NormalDemo extends AppCompatActivity {
         setContentView(R.layout.pull_refresh_sample);
 
         final PullRefreshLayout pullRefreshLayout = findViewById(R.id.pull_refresh_layout);
-        PullRefreshHeadLayout headView2 = (PullRefreshHeadLayout) LayoutInflater.from(this).inflate(R.layout.pull_refresh_head_view, pullRefreshLayout, false);
+        PullRefreshHeadLayoutTest headView2 = (PullRefreshHeadLayoutTest) LayoutInflater.from(this).inflate(R.layout.pull_refresh_head_view, pullRefreshLayout, false);
         pullRefreshLayout.addHeadWatcher(headView2);
         LinearLayout contentView1 = new LinearLayout(this);
 

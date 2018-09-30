@@ -19,8 +19,15 @@ public class PullRefreshHeadLayout extends LinearLayout implements PullRefreshHe
 
     public static final String TAG = PullRefreshHeadWatcher.class.getSimpleName();
 
-    private TextView progressFlagTV;
-    private TextView refreshFlagTV;
+    public PullOnRefreshListener pullOnRefreshListener;
+
+    public PullOnRefreshListener getPullOnRefreshListener() {
+        return pullOnRefreshListener;
+    }
+
+    public void setPullOnRefreshListener(PullOnRefreshListener pullOnRefreshListener) {
+        this.pullOnRefreshListener = pullOnRefreshListener;
+    }
 
     public PullRefreshHeadLayout(Context context) {
         super(context);
@@ -45,52 +52,31 @@ public class PullRefreshHeadLayout extends LinearLayout implements PullRefreshHe
     }
 
     private void init(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        View co = new View(context);
-        LayoutParams lp1 = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-        lp1.gravity = Gravity.BOTTOM | Gravity.LEFT;
-        lp1.weight = 1;
-        co.setLayoutParams(lp1);
-        addView(co);
-
-        progressFlagTV = new TextView(context);
-        progressFlagTV.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
-        progressFlagTV.setTextColor(Color.RED);
-        LayoutParams lp2 = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
-        lp2.gravity = Gravity.BOTTOM | Gravity.LEFT;
-        progressFlagTV.setLayoutParams(lp2);
-        addView(progressFlagTV);
-
-        refreshFlagTV = new TextView(context);
-        refreshFlagTV.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
-        refreshFlagTV.setTextColor(Color.RED);
-        LayoutParams lp = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-        lp.gravity = Gravity.BOTTOM | Gravity.LEFT;
-        lp.topMargin = 10;
-        refreshFlagTV.setLayoutParams(lp);
-        addView(refreshFlagTV);
-        refreshFlagTV.setText("Not on Refresh");
-
-        setBackgroundColor(Color.parseColor("#42A5F5"));
-    }
-
-    @Override
-    public void onPullProgressUpdate(int progress) {
-        progressFlagTV.setText("onPullProgressUpdate : " + progress);
-    }
-
-    @Override
-    public void onRefresh() {
-        refreshFlagTV.setText("On Refresh!");
-
-    }
-
-    @Override
-    public void onRefreshComplete() {
-        refreshFlagTV.setText("Not on Refresh!");
     }
 
     @Override
     public View getStick() {
         return this;
+    }
+
+    @Override
+    public void onPullProgressUpdate(int progress) {
+        if (pullOnRefreshListener != null) {
+            pullOnRefreshListener.onPullProgressUpdate(progress);
+        }
+    }
+
+    @Override
+    public void onRefresh() {
+        if (pullOnRefreshListener != null) {
+            pullOnRefreshListener.onRefresh();
+        }
+    }
+
+    @Override
+    public void onRefreshComplete() {
+        if (pullOnRefreshListener != null) {
+            pullOnRefreshListener.onRefreshComplete();
+        }
     }
 }

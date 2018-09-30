@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.widget.TextView;
 
-import com.winson.widget.pullrefreshlayout.PullRefreshHeadLayout;
 import com.winson.widget.pullrefreshlayout.PullRefreshLayout;
 import com.winson.widget.pullrefreshlayout.PullRefreshListView;
 
@@ -23,7 +22,7 @@ public class ListViewDemo extends AppCompatActivity {
         setContentView(R.layout.pull_refresh_sample);
 
         pullRefreshLayout = findViewById(R.id.pull_refresh_layout);
-        PullRefreshHeadLayout headView2 = (PullRefreshHeadLayout) LayoutInflater.from(this).inflate(R.layout.pull_refresh_head_view, pullRefreshLayout, false);
+        PullRefreshHeadLayoutTest headView2 = (PullRefreshHeadLayoutTest) LayoutInflater.from(this).inflate(R.layout.pull_refresh_head_view, pullRefreshLayout, false);
         pullRefreshLayout.addHeadWatcher(headView2);
         PullRefreshListView contentView = (PullRefreshListView) LayoutInflater.from(this).inflate(R.layout.pull_refresh_list_view, pullRefreshLayout, false);
         pullRefreshLayout.addContentWatcher(contentView);

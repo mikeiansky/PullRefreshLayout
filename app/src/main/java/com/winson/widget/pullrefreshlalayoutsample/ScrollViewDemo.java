@@ -3,11 +3,8 @@ package com.winson.widget.pullrefreshlalayoutsample;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.view.LayoutInflater;
 
-import com.winson.widget.pullrefreshlayout.PullRefreshHeadLayout;
 import com.winson.widget.pullrefreshlayout.PullRefreshLayout;
-import com.winson.widget.pullrefreshlayout.PullRefreshScrollView;
 
 public class ScrollViewDemo extends AppCompatActivity {
 

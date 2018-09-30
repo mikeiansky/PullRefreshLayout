@@ -5,18 +5,12 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.winson.widget.pullrefreshlayout.PullRefreshHeadLayout;
 import com.winson.widget.pullrefreshlayout.PullRefreshLayout;
-import com.winson.widget.pullrefreshlayout.PullRefreshListView;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class RecyclerViewDemo extends AppCompatActivity {
 
@@ -26,7 +20,7 @@ public class RecyclerViewDemo extends AppCompatActivity {
         setContentView(R.layout.pull_refresh_sample);
 
         final PullRefreshLayout pullRefreshLayout = findViewById(R.id.pull_refresh_layout);
-        PullRefreshHeadLayout headView2 = (PullRefreshHeadLayout) LayoutInflater.from(this).inflate(R.layout.pull_refresh_head_view, pullRefreshLayout, false);
+        PullRefreshHeadLayoutTest headView2 = (PullRefreshHeadLayoutTest) LayoutInflater.from(this).inflate(R.layout.pull_refresh_head_view, pullRefreshLayout, false);
         pullRefreshLayout.addHeadWatcher(headView2);
 
         MyRefreshRecyclerView contentView4 = (MyRefreshRecyclerView) LayoutInflater.from(this).inflate(R.layout.my_recycler_view, pullRefreshLayout, false);
